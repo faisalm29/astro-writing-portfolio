@@ -8,15 +8,18 @@ export async function getStaticPaths({
 }: {
   paginate: PaginateFunction;
 }) {
-  const posts = await getCollection("blog", ({ data }) => {
+  const articles = await getCollection("article", ({ data }) => {
     return import.meta.env.PROD ? data.draft !== true : true;
   });
 
-  const sortedPosts = posts.sort((a,b) => Date.parse(b.data.publishedDate) - Date.parse(a.data.publishedDate))
+  const sortedArticles = articles.sort(
+    (a, b) =>
+      Date.parse(b.data.publishedDate) - Date.parse(a.data.publishedDate)
+  );
 
-  const postPages = [...sortedPosts];
+  const articlePages = [...sortedArticles];
 
-  return paginate(postPages, {
+  return paginate(articlePages, {
     pageSize: 2,
   });
 }
@@ -24,31 +27,41 @@ export async function getStaticPaths({
 const { page } = Astro.props;
 ---
 
-<h1>Page {page.currentPage}</h1>
-<ul>
-  <!--List the array of astronaut info-->
-  {
-    page.data.map((post) => (
-      <li>
-        <a href={`/work/article/${post.id}`}>{post.data.title}</a>
-        <ul>
-          {post.data.tags.map((tag) => (
-            <li>{tag}</li>
-          ))}
-        </ul>
-      </li>
-      <time>{new Date(post.data.publishedDate).toLocaleDateString("en-US", {
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-      })}</time>
-    ))
-  }
-</ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{page.currentPage}</title>
+  </head>
+  <body>
+    <h1>{page.currentPage}</h1>
+    <ul>
+      {
+        page.data.map((article) => (
+          <li>
+            <a href={`/work/article/${article.id}`}>{article.data.title}</a>
+            <ul>
+              {article.data.tags.map((tag) => (
+                <li>{tag}</li>
+              ))}
+            </ul>
+          </li>
+          <time>{new Date(article.data.publishedDate).toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+          })}</time>
+        ))
+      }
+    </ul>
 
-{page.url.first ? <a href={page.url.first}>First</a> : null}
-{page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-{page.url.next ? <a href={page.url.next}>Next</a> : null}
-{page.url.last ? <a href={page.url.last}>Last</a> : null}
+    {page.url.first ? <a href={page.url.first}>First</a> : null}
+    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+    {page.url.next ? <a href={page.url.next}>Next</a> : null}
+    {page.url.last ? <a href={page.url.last}>Last</a> : null}
 
-<Search />
+    <Search/>
+
+  </body>
+</html>
