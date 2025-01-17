@@ -1,0 +1,60 @@
+---
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+
+const navLinks = [
+  {
+    name: "Work",
+    url: "/work",
+  },
+  {
+    name: "Resume",
+    url: "/resume",
+  },
+  {
+    name: "Contact",
+    url: "mailto@faisal.muhammad2911@gmail.com",
+  },
+];
+
+const footerLinks = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "Work",
+    url: "/work",
+  },
+  {
+    name: "Resume",
+    url: "/resume",
+  },
+  {
+    name: "Contact",
+    url: "mailto@faisal.muhammad2911@gmail.com",
+  },
+];
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar desktopLinks={navLinks} mobileLinks={footerLinks} />
+    <slot />
+    <Footer links={footerLinks} />
+  </body>
+</html>

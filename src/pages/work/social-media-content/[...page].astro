@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+import type { PaginateFunction } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import InstagramEmbed from "@components/InstagramEmbed.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const contents = await getCollection("content", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  const releasePages = [...contents];
+
+  return paginate(releasePages, {
+    pageSize: 6,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Social Media Content">
+  <h1>{page.currentPage}</h1>
+  <ul>
+    {
+      page.data.map((content) => (
+        <li>
+          <InstagramEmbed url={content.data.url} />
+        </li>
+      ))
+    }
+  </ul>
+
+  {page.url.first ? <a href={page.url.first}>First</a> : null}
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  {page.url.last ? <a href={page.url.last}>Last</a> : null}
+</BaseLayout>

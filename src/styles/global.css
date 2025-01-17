@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Serif Font */
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-ExtraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif-4";
+  src: url("/fonts/SourceSerif4-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Sans Font */
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans Book";
+  src: url("/fonts/UncutSans-BookItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans Book";
+  src: url("/fonts/UncutSans-Book.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-RegularItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Uncut Sans";
+  src: url("/fonts/UncutSans-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  /* Colors */
+
+  /* Text colors */
+  .text {
+    &-primary {
+      color: theme(colors.gray.950);
+    }
+    &-secondary {
+      color: theme(colors.gray.600);
+    }
+    &-invert {
+      color: theme(colors.gray.50);
+    }
+  }
+
+  /* Surface Colors */
+  .surface {
+    &-primary {
+      background-color: theme(colors.gray.50);
+    }
+    &-secondary {
+      background-color: theme(colors.gray.100);
+    }
+    &-invert {
+      background-color: theme(colors.gray.950);
+    }
+  }
+}
+
+@layer components {
+  .border {
+    &-primary {
+      border-color: hsla(0, 0%, 7%, 1);
+    }
+    &-secondary {
+      border-color: hsla(0, 2%, 84%, 1);
+    }
+    &-invert {
+      border-color: hsla(0, 0%, 100%, 1);
+    }
+  }
+}

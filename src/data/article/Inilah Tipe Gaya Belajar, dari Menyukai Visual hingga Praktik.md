@@ -1,13 +1,13 @@
 ---
 draft: false
-title: "Inilah Tipe Gaya Belajar, dari Menyukai Visual hingga Praktik"
-source: "https://docheck.id/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/"
-publishedDate: "2022-03-09"
-description: "Dalam model VARK, terdapat 4 tipe gaya belajar. Macam macam gaya belajar memiliki cara belajar terbaik. Mana yang cocok untuk kamu?"
-thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
-tags:
-  - "Article"
-  - "DoCheck"
+title: Inilah Tipe Gaya Belajar, dari Menyukai Visual hingga Praktik
+source: https://docheck.id/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/
+publishedDate: 2022-03-09T06:38:34+00:00
+description: Dalam model VARK, terdapat 4 tipe gaya belajar. Macam macam gaya belajar memiliki cara belajar terbaik. Mana yang cocok untuk kamu?
+thumbnail: https://ik.imagekit.io/67fdboizg/Portfolio/Article/DoCheck/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/1.jpg
+categories:
+  - Article
+  - DoCheck
 ---
 
 Gaya belajar kamu selama ini kayak gimana, _sih_? Membaca buku? Membuat _mind map_? Atau merangkum? _Nah_, cara belajar ini _kan_ pasti berbeda bagi setiap orang. Membaca mungkin efektif bagi kamu, tapi bisa jadi tidak untuk orang lain.
@@ -20,7 +20,7 @@ Dalam model gaya belajar [VARK](https://vark-learn.com/), ada empat macam gaya, 
 
 ### **Gaya Belajar Visual**
 
-![arti belajar visual](https://docheck.id/wp-content/uploads/2022/03/pexels-mikhail-nilov-8342279.jpg)
+![arti belajar visual](https://ik.imagekit.io/67fdboizg/Portfolio/Article/DoCheck/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/2.jpg)
 
 _Foto oleh Mikhail Nilov dari Pexels_
 
@@ -32,11 +32,9 @@ Kamu pernah lihat orang menghias catatannya sedemikian rupa? Atau orang yang men
 
 **Coba belajar dengan**: grafik, bagan, dan diagram.
 
-**Baca Juga: [Highlighting: Efektif untuk Belajar dengan Memperhatikan ini!](https://docheck.id/highlighting-efektif-untuk-belajar-dengan-memperhatikan-ini/)**
-
 ### **Gaya Belajar Auditori**
 
-![arti auditori](https://docheck.id/wp-content/uploads/2022/03/pexels-andrea-piacquadio-3764022.jpg)
+![arti auditori](https://ik.imagekit.io/67fdboizg/Portfolio/Article/DoCheck/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/3.jpg)
 
 Foto oleh Andrea Piacquadio dari Pexels
 
@@ -48,7 +46,7 @@ Selain itu, biasanya mereka akan menggunakan suara mereka sendiri untuk mempelaj
 
 ### **_Reading/Writing_**
 
-![gaya reading/writing](https://docheck.id/wp-content/uploads/2022/03/pexels-judit-peter-1766604.jpg)
+![gaya reading/writing](https://ik.imagekit.io/67fdboizg/Portfolio/Article/DoCheck/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/4.jpg)
 
 _Foto oleh Judit Peter dari Pexels_
 
@@ -58,7 +56,7 @@ Bekebalikan dengan _auditory learners_, _reading/writing learners_ adalah orang 
 
 ### **_Kinesthetic_**
 
-![arti kinestetik](https://docheck.id/wp-content/uploads/2022/03/pexels-pavel-danilyuk-8442276.jpg)
+![arti kinestetik](https://ik.imagekit.io/67fdboizg/Portfolio/Article/DoCheck/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/5.jpg)
 
 Foto oleh Pavel Danilyuk dari Pexels
 
@@ -68,8 +66,6 @@ Maka, tidak jarang jika orang yang termasuk ke dalam _kinesthetic learners_ kada
 
 **Coba belajar dengan**: semua indra, latihan praktis, mencontohkan, studi kasus, serta _trial_ dan error.
 
-**Baca Juga: [Menyusun Jadwal Belajar Dengan 5 Tips Sederhana Ini](https://docheck.id/langkah-menyusun-jadwal-belajar/)**
-
 ## **Kamu Termasuk Dalam Tipe Gaya Belajar Apa?**
 
 Agar belajar kamu menjadi lebih efektif, kamu harus mengetahui cara belajar terbaik bagimu itu seperti apa. Hal ini perlu kamu ketahui karena seperti yang sudah disebutkan tadi bahwa dalam model VARK, terdapat empat macam macam gaya. Proses belajar kamu akan lebih efektif jika mengatahui gaya belajar apa yang paling cocok denganmu.
@@ -78,8 +74,4 @@ Lalu, bagaimana cara untuk mengetahuinya? Dalam model VARK, kamu diharuskan untu
 
 Kalau kamu pelajar atau mahasiswa yang sedang berjuang untuk menemukan cara belajar paling efektif, mengetahui gaya belajarmu terlebih dahulu akan membantu. Coba isi kuesioner yang tersedia di laman resmi VARK tersebut untuk mengetahui ini. Satu, lagi, biar belajar kamu makin efektif, jangan lupa pakai aplikasi DoCheck, ya!
 
-**Baca Juga: [DoCheck Guide: Untuk Pelajar dan Mahasiswa](https://docheck.id/docheck-guide-untuk-pelajar-dan-mahasiswa/)**
-
 Kamu bisa memanfaatkan aplikasi DoCheck untuk menunjang kegiatan sekolah maupun kuliah. Aplikasi DoCheck bisa kamu gunakan untuk mencatat daftar tugas, daftar kegiatan sekolah, hinga kegiatan ekstrakurikuler/UKM. Tunggu apa lagi? Yuk, segera _donwload_ aplikasi DoCheck di [Google Play Store](https://play.google.com/store/apps/details?id=com.docheck.docheck) dan [App Store](https://apps.apple.com/id/app/docheck-to-do-list-app/id1603424606?l=id) sekarang. Gratis!
-
-### _Related_

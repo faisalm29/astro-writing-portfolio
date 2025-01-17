@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const releases = await getCollection("release", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  return releases.map((release) => ({
+    params: {
+      id: release.id,
+    },
+    props: {
+      release,
+    },
+  }));
+}
+
+const { release } = Astro.props;
+const { Content } = await render(release);
+---
+
+<BaseLayout title={`${release.data.title} | Faisal Muhammad`}>
+  <article>
+    <h1>{release.data.title}</h1>
+    <Image
+      src={release.data.thumbnail}
+      alt={`${release.data.title} thumbnail`}
+      width="400"
+      height="200"
+    />
+    <Content />
+  </article>
+</BaseLayout>

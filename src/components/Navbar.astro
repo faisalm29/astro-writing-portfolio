@@ -1,0 +1,74 @@
+---
+import type { NavigationLink } from "src/types";
+
+interface Props {
+  desktopLinks: Array<NavigationLink>;
+  mobileLinks: Array<NavigationLink>;
+}
+
+const { desktopLinks, mobileLinks } = Astro.props;
+---
+
+<nav class="px-[5vw] py-6 relative">
+  <ul class="flex justify-between items-center">
+    <li><a href="/" class="tracking-[0.08em]">Faisal</a></li>
+    {
+      desktopLinks.map((link) => (
+        <li class="hidden md:block">
+          <a class="tracking-[0.08em]" href={link.url}>
+            {link.name}
+          </a>
+        </li>
+      ))
+    }
+    <li class="md:hidden">
+      <button id="btn-menu">Menu</button>
+    </li>
+  </ul>
+
+  <!-- Collapsible mobile navigation -->
+  <div
+    id="mobile-nav"
+    class="hidden md:hidden lg:hidden fixed z-50 w-screen h-screen top-0 left-0 surface-secondary pt-16 pl-[5vw] pr-[7.5vw]"
+  >
+    <div class="flex justify-end mb-4">
+      <button id="btn-close">close</button>
+    </div>
+    <div class="mb-12">
+      <h4 class="uppercase tracking-[0.08em] mb-4">Go To</h4>
+      <ul>
+        {
+          mobileLinks.map((link) => (
+            <li class="flex content-center justify-centers font-display gap-4 mb-4">
+              <a class="text-md leading-[1em]" href={link.url}>
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="mb-16 md:mb-8">
+      <h4 class="uppercase tracking-[0.08em] mb-4">Social</h4>
+      <ul class="text-md">
+        <li class="mb-4">LinkedIn</li>
+        <li class="mb-4">Instagram</li>
+        <li>Github</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById("btn-menu");
+  const closeBtn = document.getElementById("btn-close");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  menuBtn?.addEventListener("click", () => {
+    mobileNav?.classList.remove("hidden");
+  });
+
+  closeBtn?.addEventListener("click", () => {
+    mobileNav?.classList.add("hidden");
+  });
+</script>

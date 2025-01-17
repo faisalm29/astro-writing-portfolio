@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+
+import placeholderImg from "../assets/placeholder-img.jpg";
+import placeholderImg2 from "../assets/placeholder-img2.jpg";
+import placeholderImg3 from "../assets/placeholder-img3.jpg";
+---
+
+<div
+  class="gap-6 px-[5vw] mb-32 md:mb-48 lg:mb-64 lg:grid md:grid-cols-8 lg:grid-cols-12"
+>
+  <div class="col-start-1 col-end-6 self-center mb-12 md:mb-0">
+    <p class="uppercase tracking-[0.08em] mb-8">what he does</p>
+    <ul class="flex flex-col font-serif text-md md:text-lg lg:text-xl">
+      <li class="list inline-flex mb-4" data-image={placeholderImg.src}>
+        Content Writing
+      </li>
+      <li class="list inline-flex mb-4" data-image={placeholderImg2.src}>
+        Copywriting
+      </li>
+      <li class="list inline-flex mb-4" data-image={placeholderImg3.src}>
+        Digital Marketing
+      </li>
+    </ul>
+  </div>
+  <div class="col-start-6 col-end-13">
+    <Image id="preview" src={placeholderImg} alt="Content Writing" />
+  </div>
+</div>
+
+<script>
+  const listItems = document.querySelectorAll(".list");
+  const previewImage = document.getElementById(
+    "preview"
+  ) as HTMLImageElement | null;
+  const defaultImage = listItems[0].getAttribute("data-image") as string;
+
+  if (previewImage) {
+    listItems.forEach((item) => {
+      item.addEventListener("mouseover", () => {
+        const newImage = item.getAttribute("data-image");
+        if (newImage) {
+          previewImage.src = newImage;
+        }
+      });
+
+      item.addEventListener("mouseout", () => {
+        previewImage.src = defaultImage;
+      });
+    });
+  }
+</script>

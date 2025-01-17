@@ -1,11 +1,31 @@
 ---
+draft: false
 title: "Cerita Insan Bumi Mandiri Inspirasi Highscope Indonesia Bantu Anak Pedalaman"
-source: "https://kumparan.com/welcome-1667199308082460668/cerita-insan-bumi-mandiri-inspirasi-highscope-indonesia-bantu-anak-pedalaman-1zo5U8V7kgj"
-publishedDate: "2023-02-10T07:07:57.200Z"
+publishedDate: "2023-02-10"
 description: "Lewat kolaborasi dengan Highscope Indonesia ini, Insan Bumi Mandiri ingin cerita anak-anak di daerah pedalaman Indonesia bisa sampai ke kota agar meningkatkan kepedulian dan solidaritas antar sesama."
+thumbnail: "../../assets/press-release/thumbnail-1.jpeg"
 tags:
-  - "Release"
+  - "Press Release"
+  - "Insan Bumi Mandiri"
+releaseAt:
+  - {
+      name: "Parahyangan Post",
+      url: "http://www.parahyangan-post.com/berita/detail/-cerita-insan-bumi-mandiri-inspirasi-highscope-indonesia-bantu-anak-pedalaman-",
+    }
+  - {
+      name: "Telusur Jatim",
+      url: "http://jatim.telusur.co.id/detail/cerita-insan-bumi-mandiri-inspirasi-highscope-indonesia-bantu-anak-pedalaman",
+    }
+  - {
+      name: "Kabare",
+      url: "https://kabare.id/p/cerita-insan-bumi-mandiri-inspirasi-highscope-indonesia-bantu-anak-pedalaman",
+    }
+  - {
+      name: "Kumparan",
+      url: "https://kumparan.com/welcome-1667199308082460668/cerita-insan-bumi-mandiri-inspirasi-highscope-indonesia-bantu-anak-pedalaman-1zo5U8V7kgj",
+    }
 ---
+
 Siswa Sekolah Highscope Indonesia dalam kegiatan sharing bersama Insan Bumi Mandiri. Dokumentasi pribadi
 
 **Bandung, 10 Februari 2023** \- Insan Bumi Mandiri membagikan cerita inspiratif di Sekolah Highscope Indonesia, Jakarta Selatan, pada Senin, 6 Februari 2023. Kegiatan ini adalah salah satu rangkaian dari Highscope’s Charity Event, sebuah program amal yang akan dilakukan oleh siswa-siswi kelas 6, 7, 8, dan 9 Highscope Indonesia.

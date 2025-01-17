@@ -1,0 +1,36 @@
+---
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "@layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const campaigns = await getCollection("campaign", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  return campaigns.map((campaign) => ({
+    params: {
+      id: campaign.id,
+    },
+    props: {
+      campaign,
+    },
+  }));
+}
+
+const { campaign } = Astro.props;
+const { Content } = await render(campaign);
+---
+
+<BaseLayout title={`${campaign.data.title} | Faisal Muhammad`}>
+  <article>
+    <h1>{campaign.data.title}</h1>
+    <Image
+      src={campaign.data.thumbnail}
+      alt={`${campaign.data.title} thumbnail`}
+      width="400"
+      height="200"
+    />
+    <Content />
+  </article>
+</BaseLayout>

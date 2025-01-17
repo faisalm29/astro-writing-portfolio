@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import type { PaginateFunction } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Search from "@components/Search.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const campaigns = await getCollection("campaign", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  const campaignPages = [...campaigns];
+
+  return paginate(campaignPages, {
+    pageSize: 2,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Fundraising Campaign">
+  <h1>{page.currentPage}</h1>
+  <ul>
+    {
+      page.data.map((campaign) => (
+        <li>
+          <a href={`/work/fundraising-campaign/${campaign.id}`}>
+            {campaign.data.title}
+          </a>
+          <ul>
+            {campaign.data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ul>
+
+  {page.url.first ? <a href={page.url.first}>First</a> : null}
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  {page.url.last ? <a href={page.url.last}>Last</a> : null}
+
+  <Search />
+</BaseLayout>

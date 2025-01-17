@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  category: string;
+  title: string;
+}
+
+const { src, alt, category, title } = Astro.props;
+---
+
+<div class="relative mb-16 last:mb-0 md:mb-24 lg:mb-0 lg:col-span-6">
+  <Image src={src} alt={alt} class="brightness-50" />
+  <div
+    class="w-full absolute px-[5vw] z-10 m-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-invert text-center"
+  >
+    <p class="uppercase tracking-[0.08em]">{category}</p>
+    <h3 class="text-md md:text-lg font-serif italic font-light">
+      {title}
+    </h3>
+  </div>
+</div>

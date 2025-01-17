@@ -1,11 +1,23 @@
 ---
-title: Insan Bumi Mandiri dan Forest Interactive Kembangkan Talenta Digital Indonesia
-source: https://kumparan.com/welcome-1667199308082460668/insan-bumi-mandiri-dan-forest-interactive-kembangkan-talenta-digital-indonesia-201XKQWb0uZ
-publishedDate: 2023-03-16T02:45:52.079Z
+draft: false
+title: "Insan Bumi Mandiri dan Forest Interactive Kembangkan Talenta Digital Indonesia"
+publishedDate: "2023-03-16"
 description: "Selain diciptakan dengan tujuan mengembangkan talenta digital dan memperkuat ekonomi digital Indonesia, #seKODlah juga berambisi membantu peserta menjadi inovator muda di masa depan."
+thumbnail: "../../assets/press-release/thumbnail-3.png"
 tags:
-  - Release
+  - "Press Release"
+  - "Insan Bumi Mandiri"
+releaseAt:
+  - {
+      name: "Kumparan",
+      url: "https://kumparan.com/welcome-1667199308082460668/insan-bumi-mandiri-dan-forest-interactive-kembangkan-talenta-digital-indonesia-201XKQWb0uZ",
+    }
+  - {
+      name: "Majalah CSR",
+      url: "https://majalahcsr.id/insan-bumi-mandiri-dan-forest-interactive-kembangkan-talenta-muda-digital/",
+    }
 ---
+
 **Bandung, 2 Maret 2023** – Insan Bumi Mandiri (IBM) berkolaborasi dengan Forest Interactive, penyedia platform telekomunikasi asal Malaysia, melaksanakan program #seKODlah yang bertujuan untuk mengembangkan talenta digital dan memperkuat ekonomi digital Indonesia. Program #seKODlah berlangsung dari tanggal 16 Februari - 30 Juni 2023.
 
 Selain diciptakan dengan tujuan mengembangkan talenta digital dan memperkuat ekonomi digital Indonesia, #seKODlah juga berambisi membantu peserta menjadi inovator muda di masa depan. Dalam program ini, terdapat beberapa tahapan pembelajaran yang dapat diikuti oleh setiap peserta, meliputi General Lecturers, Workshop: Basic Tech Skill, Workshop: Soft Skill Series, Industry Sharing, dan Capstone Project.

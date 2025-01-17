@@ -1,0 +1,117 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import {Icon} from "astro-icon/components"
+import { getCollection } from "astro:content";
+const resume = await getCollection("resume");
+const contacts = await getCollection("contact")
+---
+<BaseLayout title="Resume">
+  {resume.map((item) => (
+    // Profile
+    <h1>{item.data.profile.name}</h1>
+    <p>{`${item.data.profile.location} (willing to relocate)`}</p>
+
+    <div>
+      <ul>
+        {contacts.slice(0, 3).map((contact) => (
+          <li>
+            <a class="inline-block" href={contact.data.url} target="_blank">
+              <Icon name={contact.data.icon}/>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Work Experience</h2>
+      <ul>
+        {item.data.experience.work.map((w) => (
+          <li>
+            <h3>{`${w.company} - ${w.location}`}</h3>
+            <p>{`${w.position} (${w.date.start} - ${w.date.end})`}</p>
+            <ul>
+              {w.responsibilities.map((responsibility) => (
+                <li>{responsibility}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Project Experience</h2>
+      <ul>
+        {item.data.experience.project.map((p) => (
+          <li>
+            <h3>{`${p.name} - ${p.location}`}</h3>
+            <p>{`${p.role} (${p.date.start} - ${p.date.end})`}</p>
+            <ul>
+              {p.responsibilities.map((responsibility) => (
+                <li>{responsibility}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Organizational Experience</h2>
+      <ul>
+        {item.data.experience.organization.map((o) => (
+          <li>
+            <h3>{`${o.name} - ${o.location}`}</h3>
+            <p>{`${o.role} (${o.date.start} - ${o.date.end})`}</p>
+            <ul>
+              {o.responsibilities.map((responsibility) => (
+                <li>{responsibility}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Education</h2>
+      <ul>
+        {item.data.education.map((e) => (
+          <li>
+            <h3>{`${e.institution} (${e.date.start} - ${e.date.end})`}</h3>
+            <p>{e.name}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Certification</h2>
+      <ul>
+        {item.data.certification.map((c) => (
+          <li>
+            <h3>{`${c.institution} (${c.date})`}</h3>
+            <p>{c.name} - {c.detail} (<a href={c.credential} target="_blank">Credential</a>)</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    
+    <div>
+      <h2>Skill</h2>
+      <ul>
+        {item.data.skill.map((s) => (
+          <li>{s}</li>
+        ))}
+      </ul>
+    </div>
+
+  ))}
+</BaseLayout>

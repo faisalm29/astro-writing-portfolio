@@ -1,0 +1,58 @@
+---
+import type { NavigationLink } from "src/types";
+
+interface Props {
+  links: Array<NavigationLink>;
+}
+
+const { links } = Astro.props;
+---
+
+<footer
+  class="grid grid-cols-4 gap-x-6 row-auto pt-32 border-t-[1px] border-secondary md:grid-cols-8 lg:grid-cols-12"
+>
+  <!-- Navigation -->
+  <div class="mb-16 col-span-4 md:mb-0 lg:col-span-6 px-[5vw]">
+    <h4 class="uppercase tracking-[0.08em] mb-4">Go To</h4>
+    <ul class="flex flex-col">
+      {
+        links.map((nav, i) => (
+          <li class="flex content-center justify-centers font-display gap-4 mb-4">
+            <div class="pt-[0.1rem] font-serif italic">({i + 1})</div>
+            <a class="text-[2.5rem] leading-[1em]" href={nav.url}>
+              <div>{nav.name}</div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="col-span-4 px-[5vw] md:px-0 lg:col-span-6">
+    <!-- Social -->
+    <div class="mb-16 md:mb-8">
+      <h4 class="uppercase tracking-[0.08em] mb-4">Social</h4>
+      <ul class="text-md">
+        <li class="mb-4">LinkedIn</li>
+        <li class="mb-4">Instagram</li>
+        <li>Github</li>
+      </ul>
+    </div>
+
+    <!-- Location -->
+    <div>
+      <h4 class="uppercase tracking-[0.08em] mb-4">Location</h4>
+      <p class="text-md">Cirebon, Indonesia</p>
+    </div>
+  </div>
+
+  <!-- End note -->
+  <div
+    class="text-xs p-4 border-t-[1px] border-secondary text-center col-span-4 mt-16 md:mt-24 lg:mt-32 md:col-span-8 lg:col-span-12"
+  >
+    <p class="mb-4">
+      Created with 🤍 using Astro, Tailwind, and deployed by Vercel
+    </p>
+    <p>©2024 FAISAL MUHAMMAD – All rights reserved</p>
+  </div>
+</footer>

@@ -1,0 +1,95 @@
+---
+import Button from "@components/Button.astro";
+import ImgOverlay from "@components/ImgOverlay.astro";
+import { Image } from "astro:assets";
+
+import placeholderImg from "../assets/placeholder-img.jpg";
+---
+
+<section class="mb-32 md:mb-48 lg:mb-64">
+  <div class="mb-32 md:mb-48 lg:mb-64">
+    <div class="mb-24 md:mb-32 px-[5vw]">
+      <h2 class="text-3xl font-bold text-center mb-16">
+        Work <span class="font-serif text-base font-normal italic block mt-4"
+          >(featured)</span
+        >
+      </h2>
+      <ul class="uppercase flex gap-x-4 flex-wrap gap-y-8 justify-center">
+        <li class="pb-2 border-b-4 border-secondary inline-block">
+          <a href="work/article">article</a>
+        </li>
+        <li class="pb-2 border-b-4 border-secondary inline-block">
+          <a href="work/article">campaign</a>
+        </li>
+        <li class="pb-2 border-b-4 border-secondary inline-block">
+          <a href="work/article">social media content</a>
+        </li>
+        <li class="pb-2 border-b-4 border-secondary inline-block">
+          <a href="work/article">social media handling</a>
+        </li>
+        <li class="pb-2 border-b-4 border-secondary inline-block">
+          <a href="work/article">radio script</a>
+        </li>
+      </ul>
+    </div>
+
+    <div
+      class="pt-24 border-t-[1px] border-secondary px-[5vw] md:pt-32 lg:grid lg:grid-cols-12 lg:gap-x-16 lg:gap-y-24"
+    >
+      <ImgOverlay
+        src={placeholderImg}
+        alt="featured works"
+        category="Work Category"
+        title="Work Title"
+      />
+
+      <ImgOverlay
+        src={placeholderImg}
+        alt="featured works"
+        category="Work Category"
+        title="Air Bersih untuk 250 Keluarga di Baranusa, NTT"
+      />
+
+      <ImgOverlay
+        src={placeholderImg}
+        alt="featured works"
+        category="Work Category"
+        title="Brain Dump: Teknik Menguraikan Pikiran ala Dumbledore"
+      />
+
+      <ImgOverlay
+        src={placeholderImg}
+        alt="featured works"
+        category="Work Category"
+        title="Bangun Sumur Bor Pertama di Kampung Marolante, NTT"
+      />
+    </div>
+  </div>
+
+  <!-- More descriptiona and CTA  -->
+  <div class="px-[5vw] h-auto lg:grid lg:grid-cols-12 gap-x-6">
+    <div
+      class="mb-16 lg:col-span-5 lg:pt-16 lg:border-t-[1px] lg:border-secondary"
+    >
+      <p class="mb-12 text-md lg:text-lg">
+        Over the past few years, Faisal had written dozens of blog articles,
+        press releases, Instagram content and campaigns. He had also written
+        several radio scripts and had recently learnt digital marketing.
+      </p>
+      <Button>See More Work</Button>
+    </div>
+    <div class="lg:col-start-7 lg:col-end-13">
+      <Image src={placeholderImg} alt="featured works" class="img" />
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (min-width: 1024px) {
+    .img {
+      width: 100%;
+      height: 843px;
+      object-fit: cover;
+    }
+  }
+</style>

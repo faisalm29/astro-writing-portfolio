@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "profile": {
+      "name": "Faisal Muhammad",
+      "location": "Cirebon, Indonesia",
+      "contact": "faisal.muhammad2911@gmail.com",
+      "summary": "Former Content Writer with 1 year of experience working in the technology industry and non-governmental organizations. Successfully authored 90+ fundraising campaigns that collectively raised over Rp1.800.000.000+ as a Content Writer for the Insan Bumi Mandiri Foundation. Recently attended a digital marketing bootcamp for 3 months to learn digital marketing in more depth. Skilled in content writing/copywriting, SEO, and digital marketing."
+    },
+    "experience": {
+      "work": [
+        {
+          "company": "Insan Bumi Mandiri",
+          "location": "Bandung, Indonesia",
+          "position": "Freelance Content Writer",
+          "date": {
+            "start": "February 2023",
+            "end": "October 2023"
+          },
+          "responsibilities": [
+            "Wrote 90+ fundraising campaigns that were published on Insan Bumi Mandiri’s website with total donations reaching Rp1.800.000.000+.",
+            "Wrote 15+ press releases about the achievements and activities of Insan Bumi Mandiri with the goal of promoting it.",
+            "Wrote 30+ blog articles on a variety of topics including health, community empowerment and tourism.",
+            "Created 80+ Instagram and TikTok contents in form of feed, carousel, or reel."
+          ]
+        },
+        {
+          "company": "PT. DoCheck Bagi Indonesia",
+          "location": "Bandung, Indonesia",
+          "position": "Content Writer Intern",
+          "date": {
+            "start": "December 2021",
+            "end": "March 2022"
+          },
+          "responsibilities": [
+            "Wrote 40+ blog articles on a wide variety of topics linked to productivity.",
+            "Wrote 10+ Twitter threads on a wide variety of topics linked to productivity.",
+            "Create monthly content plans for Instagram, Twitter and blog articles. ",
+            "Contributed in DoZine (DoCheck’s monthly magazine) releases as a writer."
+          ]
+        },
+        {
+          "company": "Ardan Group",
+          "location": "Bandung, Indonesia",
+          "position": "B Radio Assistant Producer Intern",
+          "date": {
+            "start": "January 2020",
+            "end": "February 2020"
+          },
+          "responsibilities": [
+            "Wrote 5+ scripts for FlyOver (afternoon) broadcast program that align with advertiser’s product yet entertaining, easy to listen, and insightful.",
+            "Successfully gathered 70+ respondents while conducting a telesurvey about radio listener trends and advertiser products.",
+            "Wrote news and traffic report scripts that are read periodically during broadcast by the broadcaster.",
+            "Made a list of interesting questions for upcoming guest interviews."
+          ]
+        },
+        {
+          "company": "Indonesian Institute of Sciences (LIPI)",
+          "location": "Bandung, Indonesia",
+          "position": "Field Researcher Intern",
+          "date": {
+            "start": "July 2019",
+            "end": "September 2019"
+          },
+          "responsibilities": [
+            "Made research plans based on the research subject profile.",
+            "Collected data related to the LIPI’s bio-toilet project at Babakan Sinyar Public Elementary School.",
+            "Analyzed the data regarding the bio-toilet project that has been collected.",
+            "Presented the analyzed data in front of LIPI’s researchers."
+          ]
+        }
+      ],
+      "project": [
+        {
+          "name": "I-POD",
+          "location": "Sumedang, Indonesia",
+          "role": "Project Supervisor",
+          "date": {
+            "start": "March 2020",
+            "end": "October 2020"
+          },
+          "responsibilities": [
+            "Managed to make I-Pod available on several digital streaming platforms, including Spotify.",
+            "Managed to adapt with COVID-19 pandemic situation."
+          ]
+        },
+        {
+          "name": "Ilkom Mengajar II",
+          "location": "Sumedang, Indonesia",
+          "role": "Project Officer",
+          "date": {
+            "start": "October 2019",
+            "end": "November 2019"
+          },
+          "responsibilities": [
+            "Formulated topic, concept, and learning method based on target participants.",
+            "Managed to deliver learning materials about bullying in a way that was fun and understood by elementary school students as participants.",
+            "Managed to make students engaged and actively participated during learning sessions."
+          ]
+        }
+      ],
+      "organization": [
+        {
+          "name": "Communication Science Student Association of Padjadjaran university",
+          "location": "Sumedang, Indonesia",
+          "role": "Staff of Media Division",
+          "date": {
+            "start": "January 2020",
+            "end": "December 2020"
+          },
+          "responsibilities": [
+            "Created digital content and all Communication Science Student Association of Padjadjaran University’s publication needs, such as Instagram post graphics and captions, podcasts, infographics, and managing social media.",
+            "Participated in the creation of Yellowgami (Communication Science Student Association of Padjadjaran University’s annual newsletter) as a layouter."
+          ]
+        },
+        {
+          "name": "Communication Science Student Association of Padjadjaran university",
+          "location": "Sumedang, Indonesia",
+          "role": "Staff of Community Service Division",
+          "date": {
+            "start": "March 2019",
+            "end": "December 2019"
+          },
+          "responsibilities": [
+            "Maintained good relationships with the surrounding community through the Communication Science Student Association of Padjadjaran University’s work program.",
+            "Raised funds for victims and affected people when a natural disaster occurs."
+          ]
+        }
+      ]
+    },
+    "education": [
+      {
+        "institution": "Tempat Belajar",
+        "date": {
+          "start": "March 2024",
+          "end": "June 2024"
+        },
+        "name": "Full-Stack Digital Marketing Bootcamp - Batch #12"
+      },
+      {
+        "institution": "Padjadjaran University",
+        "date": {
+          "start": "August 2017",
+          "end": "August 2022"
+        },
+        "name": "Bacherlor of Communication Science - GPA 3.63"
+      }
+    ],
+    "certification": [
+      {
+        "institution": "Englishvit",
+        "date": "April 2024 - April 2026",
+        "name": "TOEFL-ITP",
+        "detail": "Score 553",
+        "credential": "https://englishvit.com/certificate/status/EV-TO9-04-2024-0173"
+      },
+      {
+        "institution": "Tempat Belajar",
+        "date": "No expiration date",
+        "name": "Full-Stack Digital Marketing Bootcamp",
+        "detail": "Batch 12",
+        "credential": "https://drive.google.com/file/d/1CxhBK-5ULfI3-yvfKVtX46ugcxDmeMQY/view?usp=sharing"
+      },
+      {
+        "institution": "Udemy",
+        "date": "No expiration date",
+        "name": "Microsoft Excel",
+        "detail": "Excel from Beginner to Advanced",
+        "credential": "https://www.udemy.com/certificate/UC-4044d1c8-d71a-4875-a1be-ce0fe77a35bf/"
+      }
+    ],
+    "skill": [
+      "Content writing/copywriting",
+      "Social media management",
+      "Digital advertising (Meta, TikTok, Google)",
+      "WordPress (CMS)",
+      "SEO",
+      "Digital marketing",
+      "Communication"
+    ]
+  }
+]

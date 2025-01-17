@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { PaginateFunction } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 import Search from "@components/Search.astro";
 
 export async function getStaticPaths({
@@ -20,48 +21,39 @@ export async function getStaticPaths({
   const articlePages = [...sortedArticles];
 
   return paginate(articlePages, {
-    pageSize: 2,
+    pageSize: 1,
   });
 }
 
 const { page } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{page.currentPage}</title>
-  </head>
-  <body>
-    <h1>{page.currentPage}</h1>
-    <ul>
-      {
-        page.data.map((article) => (
-          <li>
-            <a href={`/work/article/${article.id}`}>{article.data.title}</a>
-            <ul>
-              {article.data.tags.map((tag) => (
-                <li>{tag}</li>
-              ))}
-            </ul>
-          </li>
-          <time>{new Date(article.data.publishedDate).toLocaleDateString("en-US", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-          })}</time>
-        ))
-      }
-    </ul>
+<BaseLayout title="Article">
+  <h1>{page.currentPage}</h1>
+  <ul>
+    {
+      page.data.map((article) => (
+        <li>
+          <a class="article-link" href={`/work/article/${article.id}`}>{article.data.title}</a>
+          <ul>
+            {article.data.categories.map((category) => (
+              <li>{category}</li>
+            ))}
+          </ul>
+        </li>
+        <time>{new Date(article.data.publishedDate).toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        })}</time>
+      ))
+    }
+  </ul>
 
-    {page.url.first ? <a href={page.url.first}>First</a> : null}
-    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-    {page.url.next ? <a href={page.url.next}>Next</a> : null}
-    {page.url.last ? <a href={page.url.last}>Last</a> : null}
+  {page.url.first ? <a href={page.url.first}>First</a> : null}
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  {page.url.last ? <a href={page.url.last}>Last</a> : null}
 
-    <Search/>
-
-  </body>
-</html>
+  <Search/>
+</BaseLayout>

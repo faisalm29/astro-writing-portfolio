@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import type { PaginateFunction } from "astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Search from "@components/Search.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const releases = await getCollection("release", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  const sortedReleases = releases.sort((a,b) => Date.parse(b.data.publishedDate) - Date.parse(a.data.publishedDate))
+
+  const releasePages = [...sortedReleases];
+
+  return paginate(releasePages, {
+    pageSize: 2,
+  });
+}
+
+const { page } = Astro.props;
+---
+<BaseLayout title="Press Release">
+  <h1>{page.currentPage}</h1>
+  <ul>
+    {
+      page.data.map((release) => (
+        <li>
+          <a href={`/work/press-release/${release.id}`}>{release.data.title}</a>
+          <ul>
+            {release.data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </li>
+        <time>{new Date(release.data.publishedDate).toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        })}</time>
+        <ul>
+          {release.data.releaseAt.map((at) => (
+            <li>
+              <a href={at.url} target="_blank">{at.name}</a>
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+  </ul>
+
+  {page.url.first ? <a href={page.url.first}>First</a> : null}
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  {page.url.last ? <a href={page.url.last}>Last</a> : null}
+
+  <Search/>
+</BaseLayout>

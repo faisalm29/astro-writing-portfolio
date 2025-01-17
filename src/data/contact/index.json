@@ -1,0 +1,22 @@
+[
+  {
+    "id": "instagram",
+    "icon": "mdi:instagram",
+    "url": "https://www.instagram.com/faisalm29/"
+  },
+  {
+    "id": "linkedin",
+    "icon": "mdi:linkedin",
+    "url": "https://www.linkedin.com/in/faisal-muhammad-537741175/"
+  },
+  {
+    "id": "email",
+    "icon": "mdi:alternate-email",
+    "url": "mailto:faisal.muhammad2911@gmail.com?body=Hi,%20Faisal!"
+  },
+  {
+    "id": "github",
+    "icon": "mdi:github",
+    "url": "https://github.com/faisalm29"
+  }
+]
