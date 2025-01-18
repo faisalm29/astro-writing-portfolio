@@ -12,7 +12,7 @@ export default defineConfig({
     icon(),
     mdx(),
     tailwind({
-      applyBaseStyles: false,
+      nesting: true,
     }),
   ],
   image: {
