@@ -1,1 +1,34 @@
-<div></div>
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  thumbnail: ImageMetadata;
+  title: string;
+  category: string;
+  date: string;
+  id: string;
+}
+
+const { thumbnail, title, category, date, id } = Astro.props;
+---
+
+<a href={`/work/article/${id}`}>
+  <div class="mb-8">
+    <Image src={thumbnail} alt={title} width={1024} height={512} />
+  </div>
+  <div>
+    <p class="uppercase mb-4 text-center">{category}</p>
+    <div class="mb-2 flex justify-center">
+      <time class="font-serif italic">
+        {
+          new Date(date).toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        }
+      </time>
+    </div>
+    <h2 class="text-center text-md">{title}</h2>
+  </div>
+</a>
