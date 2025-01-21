@@ -1,6 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
 import placeholderImg from "../assets/placeholder-img.jpg";
 import placeholderImg2 from "../assets/placeholder-img2.jpg";
 import placeholderImg3 from "../assets/placeholder-img3.jpg";
@@ -24,7 +22,7 @@ import placeholderImg3 from "../assets/placeholder-img3.jpg";
     </ul>
   </div>
   <div class="col-start-6 col-end-13">
-    <Image id="preview" src={placeholderImg} alt="Content Writing" />
+    <img id="preview" src={placeholderImg.src} alt="Content Writing" />
   </div>
 </div>
 

@@ -1,18 +1,31 @@
 ---
 import { Image } from "astro:assets";
+import { lazy } from "astro:schema";
 
 interface Props {
   src: ImageMetadata;
   alt: string;
   category: string;
   title: string;
+  w?: number;
+  h?: number;
+  layout?: "fixed" | "full-width" | "none" | "responsive";
+  fit?: "contain" | "cover" | "fill" | "none" | "scale-down";
 }
 
-const { src, alt, category, title } = Astro.props;
+const { src, alt, category, title, w, h, layout, fit } = Astro.props;
 ---
 
 <div class="relative mb-16 last:mb-0 md:mb-24 lg:mb-0 lg:col-span-6">
-  <Image src={src} alt={alt} class="brightness-50" />
+  <Image
+    src={src}
+    alt={alt}
+    class="brightness-50"
+    width={w}
+    height={h}
+    layout={layout}
+    fit={fit}
+  />
   <div
     class="w-full absolute px-[5vw] z-10 m-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-invert text-center"
   >

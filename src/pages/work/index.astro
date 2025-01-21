@@ -1,11 +1,59 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import placeholderImg from "../../assets/placeholder-img.jpg";
+
+const works = [
+  {
+    type: "Article",
+    url: "/article",
+  },
+  {
+    type: "Fundraising Campaign",
+    url: "/fundraising-campaign",
+  },
+  {
+    type: "Press Release",
+    url: "/press-release",
+  },
+  {
+    type: "Social Media Content",
+    url: "/social-media-content",
+  },
+];
 ---
 
 <BaseLayout title="Work">
-  <h1>Selected Work</h1>
-  <a href="/work/article">Article</a>
-  <a href="/work/fundraising-campaign">Fundraising Campaign</a>
-  <a href="/work/press-release">Press Release</a>
-  <a href="/work/social-media-content">Social Media Content</a>
+  <div class="mt-32 mb-32 md:mt-48 md:mb-48 lg:mt-64 lg:mb-64">
+    <h1
+      class="mb-16 md:mb-24 px-[5vw] text-3xl font-bold text-center md:text-4xl lg:text-5xl"
+    >
+      Work
+    </h1>
+    <ul class="pt-24 border-t-[1px] border-secondary px-[5vw] md:pt-32">
+      {
+        works.map((work) => (
+          <li class="mb-24 last:mb-0">
+            <a
+              href={`/work${work.url}`}
+              class="relative mb-16 last:mb-0 md:mb-24 lg:mb-0 lg:col-span-6"
+            >
+              <img
+                src={placeholderImg.src}
+                alt={work.type}
+                class="brightness-50 w-full h-[287px] md:h-[500px] lg:h-[544px] object-cover"
+              />
+              <div class="w-full absolute px-[5vw] z-10 m-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-invert text-center">
+                <p class="uppercase tracking-[0.08em] text-sm md:text-md lg:text-lg">
+                  work
+                </p>
+                <h3 class="text-xl font-serif italic font-light md:text-3xl lg:text-4xl">
+                  {work.type}
+                </h3>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </BaseLayout>

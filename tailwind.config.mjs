@@ -36,5 +36,5 @@ export default {
       "5xl": "5.9375rem", // 95px
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

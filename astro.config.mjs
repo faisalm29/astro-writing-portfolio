@@ -19,4 +19,7 @@ export default defineConfig({
     domains: ["insanbumimandiri.org", "ik.imagekit.io"],
     remotePatterns: [{ protocol: "https" }],
   },
+  experimental: {
+    responsiveImages: true,
+  },
 });
