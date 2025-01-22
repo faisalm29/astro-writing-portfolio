@@ -22,7 +22,7 @@ const article = defineCollection({
           "Fundraising Campaign",
           "DoCheck",
           "Insan Bumi Mandiri",
-        ])
+        ]),
       ),
     }),
 });
@@ -47,13 +47,13 @@ const release = defineCollection({
           "Fundraising Campaign",
           "DoCheck",
           "Insan Bumi Mandiri",
-        ])
+        ]),
       ),
       releaseAt: z.array(
         z.object({
           name: z.string(),
           url: z.string(),
-        })
+        }),
       ),
     }),
 });
@@ -70,8 +70,7 @@ const campaign = defineCollection({
       source: z.string(),
       description: z.string(),
       thumbnail: image(),
-      totalDonation: z.string(),
-      tags: z.array(
+      categories: z.array(
         z.enum([
           "Article",
           "Press Release",
@@ -79,8 +78,10 @@ const campaign = defineCollection({
           "Fundraising Campaign",
           "DoCheck",
           "Insan Bumi Mandiri",
-        ])
+        ]),
       ),
+      totalDonation: z.string(),
+      publishedDate: z.coerce.string(),
     }),
 });
 
@@ -114,7 +115,7 @@ const resume = defineCollection({
             end: z.string(),
           }),
           responsibilities: z.array(z.string()),
-        })
+        }),
       ),
       project: z.array(
         z.object({
@@ -126,7 +127,7 @@ const resume = defineCollection({
             end: z.string(),
           }),
           responsibilities: z.array(z.string()),
-        })
+        }),
       ),
       organization: z.array(
         z.object({
@@ -138,7 +139,7 @@ const resume = defineCollection({
             end: z.string(),
           }),
           responsibilities: z.array(z.string()),
-        })
+        }),
       ),
     }),
     education: z.array(
@@ -149,7 +150,7 @@ const resume = defineCollection({
           end: z.string(),
         }),
         name: z.string(),
-      })
+      }),
     ),
     certification: z.array(
       z.object({
@@ -158,7 +159,7 @@ const resume = defineCollection({
         name: z.string(),
         detail: z.string(),
         credential: z.string(),
-      })
+      }),
     ),
     skill: z.array(z.string()),
   }),

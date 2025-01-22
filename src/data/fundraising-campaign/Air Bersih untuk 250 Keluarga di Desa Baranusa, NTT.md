@@ -3,11 +3,12 @@ draft: false
 title: "Air Bersih untuk 250 Keluarga di Desa Baranusa, NTT"
 source: "https://donasi.insanbumimandiri.org/campaign/air-bersih-baranusa"
 description: "Warga Desa Baranusa, Kecamatan Pantar Barat, Kabupaten Alor, Provinsi Nusa Tenggara Timur, tidak pernah merasakan kemudahan dalam mendapatkan air bersih."
-thumbnail: "../../assets/fundraising-campaign/campaign-1.jpeg"
-totalDonation: "33.395.337"
-tags:
+thumbnail: "https://space.adaide.co.id/insanbumimandiri/public/thumbnail/campaign/dKWehJhZon4v.png"
+categories:
   - "Fundraising Campaign"
   - "Insan Bumi Mandiri"
+totalDonation: "59,165,599"
+publishedDate: "14 Ags 2023"
 ---
 
 **Warga Desa Baranusa, Kecamatan Pantar Barat, Kabupaten Alor, Provinsi Nusa Tenggara Timur, tidak pernah merasakan kemudahan dalam mendapatkan air bersih.**

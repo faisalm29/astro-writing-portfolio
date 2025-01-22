@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import type { PaginateFunction } from "astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Search from "@components/Search.astro";
+import ArticleCard from "@components/ArticleCard.astro";
+import Button from "@components/Button.astro";
 
 export async function getStaticPaths({
   paginate,
@@ -16,7 +18,7 @@ export async function getStaticPaths({
   const campaignPages = [...campaigns];
 
   return paginate(campaignPages, {
-    pageSize: 2,
+    pageSize: 6,
   });
 }
 
@@ -24,28 +26,39 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title="Fundraising Campaign">
-  <h1>{page.currentPage}</h1>
-  <ul>
-    {
-      page.data.map((campaign) => (
-        <li>
-          <a href={`/work/fundraising-campaign/${campaign.id}`}>
-            {campaign.data.title}
-          </a>
-          <ul>
-            {campaign.data.tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul>
-        </li>
-      ))
-    }
-  </ul>
+  <div class="mt-32 mb-32 md:mt-48 md:mb-48 lg:mt-64 lg:mb-64">
+    <h1
+      class="text-3xl font-bold text-center mb-16 md:text-4xl after:content-['(featured)'] after:mt-2 after:block after:text-base after:font-normal after:font-serif after:italic lg:after:inline lg:text-5xl lg:after:mt-4 lg:after:absolute"
+    >
+      Campaign
+    </h1>
+    <div class="flex justify-center mb-8">
+      <Search />
+    </div>
+    <ul
+      class="px-[5vw] pt-24 border-t-[1px] border-secondary md:pt-32 grid md:grid-cols-8 lg:grid-cols-12 md:grid-rows-2 gap-y-32 md:gap-x-16"
+    >
+      {
+        page.data.map((campaign) => (
+          <li class="col-span-4">
+            <ArticleCard
+              thumbnail={campaign.data.thumbnail}
+              title={campaign.data.title}
+              category="fundraising campaign"
+              date="29 November"
+              id={`/work/fundraising-campaign/${campaign.id}`}
+            />
+          </li>
+        ))
+      }
+    </ul>
 
-  {page.url.first ? <a href={page.url.first}>First</a> : null}
-  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-  {page.url.next ? <a href={page.url.next}>Next</a> : null}
-  {page.url.last ? <a href={page.url.last}>Last</a> : null}
-
-  <Search />
+    <div class="mt-24 flex justify-center gap-4">
+      {page.url.first ? <Button url={page.url.first}>First</Button> : null}
+      {page.url.prev ? <Button url={page.url.prev}>Previous</Button> : null}
+      <Button url={page.url.current}>{page.currentPage}</Button>
+      {page.url.next ? <Button url={page.url.next}>Next</Button> : null}
+      {page.url.last ? <Button url={page.url.last}>Last</Button> : null}
+    </div>
+  </div>
 </BaseLayout>

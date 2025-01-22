@@ -52,7 +52,7 @@ const { page } = Astro.props;
               title={article.data.title}
               category="article"
               date={article.data.publishedDate}
-              id={article.id}
+              id={`/work/article/${article.id}`}
             />
           </li>
         ))

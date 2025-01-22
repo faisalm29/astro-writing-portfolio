@@ -12,7 +12,7 @@ interface Props {
 const { thumbnail, title, category, date, id } = Astro.props;
 ---
 
-<a href={`/work/article/${id}`}>
+<a href={id}>
   <div class="mb-8">
     <Image src={thumbnail} alt={title} width={1024} height={512} />
   </div>
