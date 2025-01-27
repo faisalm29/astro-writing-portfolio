@@ -6,16 +6,18 @@ const resume = await getCollection("resume");
 const contacts = await getCollection("contact")
 ---
 <BaseLayout title="Resume">
+  <div class="mx-[5vw] mt-32 mb-32">
   {resume.map((item) => (
     // Profile
-    <h1>{item.data.profile.name}</h1>
-    <p>{`${item.data.profile.location} (willing to relocate)`}</p>
+    <div class="flex items-start">
+      <h1 class="text-xl font-bold uppercase w-1/2">{item.data.profile.name}</h1>
+      
 
-    <div>
-      <ul>
+     
+      <ul class="flex justify-end w-1/2">
         {contacts.slice(0, 3).map((contact) => (
-          <li>
-            <a class="inline-block" href={contact.data.url} target="_blank">
+          <li class="inline-block">
+            <a class="text-[32px]" href={contact.data.url} target="_blank">
               <Icon name={contact.data.icon}/>
             </a>
           </li>
@@ -24,16 +26,31 @@ const contacts = await getCollection("contact")
     </div>
 
     
-    <div>
-      <h2>Work Experience</h2>
+    <p class="font-serif italic mb-4">{`${item.data.profile.location} (willing to relocate)`}</p>
+    
+    
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Work Experience</h2>
       <ul>
         {item.data.experience.work.map((w) => (
           <li>
-            <h3>{`${w.company} - ${w.location}`}</h3>
-            <p>{`${w.position} (${w.date.start} - ${w.date.end})`}</p>
+            <div class="flex justify-between items-center gap-x-2">
+              <h3><span class="text-md font-bold">{`${w.company}`}</span> - <span class="font-serif italic">{`${w.location}`}</span></h3>
+              {w.website && <a href={w.website} target="_blank">
+                <Icon name="ri:external-link-line" class="text-[32px]"/>
+              </a>}
+            </div>
+            <p><span class="font-bold">{`${w.position}`}</span> <span class="font-serif italic">{`(${w.date.start} - ${w.date.end})`}</span></p>
             <ul>
               {w.responsibilities.map((responsibility) => (
-                <li>{responsibility}</li>
+                <li class="flex gap-2 last:mb-4">
+                  <div class="pb-[0.1rem]">
+                   ●
+                  </div>
+                  <div>
+                    {responsibility}
+                  </div>
+                </li>
               ))}
             </ul>
           </li>
@@ -42,16 +59,28 @@ const contacts = await getCollection("contact")
     </div>
 
     
-    <div>
-      <h2>Project Experience</h2>
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Project Experience</h2>
       <ul>
         {item.data.experience.project.map((p) => (
           <li>
-            <h3>{`${p.name} - ${p.location}`}</h3>
-            <p>{`${p.role} (${p.date.start} - ${p.date.end})`}</p>
+            <div class="flex justify-between items-center gap-x-2">
+              <h3><span class="text-md font-bold">{`${p.name}`}</span> - <span class="font-serif italic">{`${p.location}`}</span></h3>
+              {p.website && <a href={p.website} target="_blank">
+                  <Icon name="ri:external-link-line" class="text-[32px]"/>
+                </a>}
+            </div>
+            <p><span class="font-bold">{`${p.role}`}</span> <span class="font-serif italic">{`(${p.date.start} - ${p.date.end})`}</span></p>
             <ul>
               {p.responsibilities.map((responsibility) => (
-                <li>{responsibility}</li>
+                <li class="flex gap-2 last:mb-4">
+                  <div class="pb-[0.1rem]">
+                   ●
+                  </div>
+                  <div>
+                    {responsibility}
+                  </div>
+                </li>
               ))}
             </ul>
           </li>
@@ -60,16 +89,28 @@ const contacts = await getCollection("contact")
     </div>
 
     
-    <div>
-      <h2>Organizational Experience</h2>
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Organizational Experience</h2>
       <ul>
         {item.data.experience.organization.map((o) => (
           <li>
-            <h3>{`${o.name} - ${o.location}`}</h3>
-            <p>{`${o.role} (${o.date.start} - ${o.date.end})`}</p>
+            <div class="flex justify-between items-center gap-x-2">
+              <h3><span class="text-md font-bold">{`${o.name}`}</span> - <span class="font-serif italic">{`${o.location}`}</span></h3>
+              {o.website && <a href={o.website} target="_blank">
+                  <Icon name="ri:external-link-line" class="text-[32px]"/>
+                </a>}
+            </div>
+            <p><span class="font-bold">{`${o.role}`}</span> <span class="font-serif italic">{`(${o.date.start} - ${o.date.end})`}</span></p>
             <ul>
               {o.responsibilities.map((responsibility) => (
-                <li>{responsibility}</li>
+                <li class="flex gap-2 last:mb-4">
+                  <div class="pb-[0.1rem]">
+                   ●
+                  </div>
+                  <div>
+                    {responsibility}
+                  </div>
+                </li>
               ))}
             </ul>
           </li>
@@ -78,40 +119,53 @@ const contacts = await getCollection("contact")
     </div>
 
     
-    <div>
-      <h2>Education</h2>
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Education</h2>
       <ul>
         {item.data.education.map((e) => (
-          <li>
-            <h3>{`${e.institution} (${e.date.start} - ${e.date.end})`}</h3>
-            <p>{e.name}</p>
+          <li class="mb-4">
+            <div class="flex justify-between items-center gap-x-2">
+              <h3><span class="font-bold">{`${e.institution}`}</span> <span class="font-serif italic">{`(${e.date.start} - ${e.date.end})`}</span></h3>
+              {e.website && <a href={e.website} target="_blank">
+                  <Icon name="ri:external-link-line" class="text-[32px]"/>
+                </a>}
+            </div>
+            <p>{e.name}</p>            
           </li>
         ))}
       </ul>
     </div>
 
     
-    <div>
-      <h2>Certification</h2>
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Certification</h2>
       <ul>
         {item.data.certification.map((c) => (
-          <li>
-            <h3>{`${c.institution} (${c.date})`}</h3>
-            <p>{c.name} - {c.detail} (<a href={c.credential} target="_blank">Credential</a>)</p>
+          <li class="mb-4">
+              <h3><span class="font-bold">{`${c.institution}`}</span> <span class="font-serif italic">{`(${c.date})`}</span></h3>
+              <p>{c.name} - {c.detail} (<a href={c.credential} target="_blank" class="underline">Credential</a>)</p>
           </li>
         ))}
       </ul>
     </div>
 
     
-    <div>
-      <h2>Skill</h2>
+    <div class="pt-8">
+      <h2 class="text-lg font-bold border-b-[1px] border-secondary">Skill</h2>
       <ul>
         {item.data.skill.map((s) => (
-          <li>{s}</li>
+          <li class="flex gap-2">
+            <div class="pb-[0.1rem]">
+              ●
+            </div>
+            <div>
+              {s}
+            </div>
+          </li>
         ))}
       </ul>
     </div>
 
   ))}
+  </div>
 </BaseLayout>

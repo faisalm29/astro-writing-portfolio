@@ -17,6 +17,7 @@
             "start": "February 2023",
             "end": "October 2023"
           },
+          "website": "https://insanbumimandiri.org/",
           "responsibilities": [
             "Wrote 90+ fundraising campaigns that were published on Insan Bumi Mandiri’s website with total donations reaching Rp1.800.000.000+.",
             "Wrote 15+ press releases about the achievements and activities of Insan Bumi Mandiri with the goal of promoting it.",
@@ -32,6 +33,7 @@
             "start": "December 2021",
             "end": "March 2022"
           },
+          "website": "https://docheck.id/",
           "responsibilities": [
             "Wrote 40+ blog articles on a wide variety of topics linked to productivity.",
             "Wrote 10+ Twitter threads on a wide variety of topics linked to productivity.",
@@ -47,6 +49,7 @@
             "start": "January 2020",
             "end": "February 2020"
           },
+          "website": "https://ardangroup.fm/",
           "responsibilities": [
             "Wrote 5+ scripts for FlyOver (afternoon) broadcast program that align with advertiser’s product yet entertaining, easy to listen, and insightful.",
             "Successfully gathered 70+ respondents while conducting a telesurvey about radio listener trends and advertiser products.",
@@ -62,6 +65,7 @@
             "start": "July 2019",
             "end": "September 2019"
           },
+          "website": "https://brin.go.id/",
           "responsibilities": [
             "Made research plans based on the research subject profile.",
             "Collected data related to the LIPI’s bio-toilet project at Babakan Sinyar Public Elementary School.",
@@ -79,6 +83,7 @@
             "start": "March 2020",
             "end": "October 2020"
           },
+          "website": "https://bit.ly/I-Podcast",
           "responsibilities": [
             "Managed to make I-Pod available on several digital streaming platforms, including Spotify.",
             "Managed to adapt with COVID-19 pandemic situation."
@@ -92,6 +97,7 @@
             "start": "October 2019",
             "end": "November 2019"
           },
+          "website": "",
           "responsibilities": [
             "Formulated topic, concept, and learning method based on target participants.",
             "Managed to deliver learning materials about bullying in a way that was fun and understood by elementary school students as participants.",
@@ -101,26 +107,28 @@
       ],
       "organization": [
         {
-          "name": "Communication Science Student Association of Padjadjaran university",
+          "name": "Communication Science Student Association of Padjadjaran University",
           "location": "Sumedang, Indonesia",
           "role": "Staff of Media Division",
           "date": {
             "start": "January 2020",
             "end": "December 2020"
           },
+          "website": "https://ilkom.fikom.unpad.ac.id/mahasiswa/himpunan-mahasiswa/",
           "responsibilities": [
             "Created digital content and all Communication Science Student Association of Padjadjaran University’s publication needs, such as Instagram post graphics and captions, podcasts, infographics, and managing social media.",
             "Participated in the creation of Yellowgami (Communication Science Student Association of Padjadjaran University’s annual newsletter) as a layouter."
           ]
         },
         {
-          "name": "Communication Science Student Association of Padjadjaran university",
+          "name": "Communication Science Student Association of Padjadjaran University",
           "location": "Sumedang, Indonesia",
           "role": "Staff of Community Service Division",
           "date": {
             "start": "March 2019",
             "end": "December 2019"
           },
+          "website": "https://ilkom.fikom.unpad.ac.id/mahasiswa/himpunan-mahasiswa/",
           "responsibilities": [
             "Maintained good relationships with the surrounding community through the Communication Science Student Association of Padjadjaran University’s work program.",
             "Raised funds for victims and affected people when a natural disaster occurs."
@@ -130,19 +138,12 @@
     },
     "education": [
       {
-        "institution": "Tempat Belajar",
-        "date": {
-          "start": "March 2024",
-          "end": "June 2024"
-        },
-        "name": "Full-Stack Digital Marketing Bootcamp - Batch #12"
-      },
-      {
         "institution": "Padjadjaran University",
         "date": {
           "start": "August 2017",
           "end": "August 2022"
         },
+        "website": "https://www.unpad.ac.id/",
         "name": "Bacherlor of Communication Science - GPA 3.63"
       }
     ],

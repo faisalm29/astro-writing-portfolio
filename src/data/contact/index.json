@@ -1,22 +1,22 @@
 [
   {
     "id": "instagram",
-    "icon": "mdi:instagram",
+    "icon": "ri:instagram-fill",
     "url": "https://www.instagram.com/faisalm29/"
   },
   {
     "id": "linkedin",
-    "icon": "mdi:linkedin",
+    "icon": "ri:linkedin-box-fill",
     "url": "https://www.linkedin.com/in/faisal-muhammad-537741175/"
   },
   {
     "id": "email",
-    "icon": "mdi:alternate-email",
+    "icon": "ri:mail-fill",
     "url": "mailto:faisal.muhammad2911@gmail.com?body=Hi,%20Faisal!"
   },
   {
     "id": "github",
-    "icon": "mdi:github",
+    "icon": "ri:github-fill",
     "url": "https://github.com/faisalm29"
   }
 ]
