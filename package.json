@@ -14,6 +14,7 @@
     "@iconify-json/ri": "^1.2.5",
     "astro": "^5.0.3",
     "astro-pagefind": "^1.7.0",
+    "astro-seo": "^0.8.4",
     "sass": "^1.83.1",
     "tailwindcss": "^3.4.17"
   },
