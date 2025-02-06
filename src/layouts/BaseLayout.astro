@@ -1,7 +1,10 @@
 ---
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
+import { getCollection } from "astro:content";
 import { SEO } from "astro-seo";
+
+const resume = await getCollection("resume");
 
 const navLinks = [
   {
@@ -38,48 +41,73 @@ const footerLinks = [
 ];
 
 interface Props {
-  title: string;
+  title?: string;
+  description?: string;
+  ogImg?: string
 }
 
-const { title } = Astro.props;
+const { title, description, ogImg } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <SEO
-      title="A Very Descriptive Title"
-      description="A heavily optimized description full of well-researched keywords."
-      openGraph={{
-        basic: {
-          title: "A Very Descriptive Title",
-          type: "A type.",
-          image:
-            "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-        },
-      }}
-      twitter={{
-        creator: "@jonasmerlins1",
-      }}
-      extend={{
-        // extending the default link tags
-        link: [{ rel: "icon", href: "/favicon.ico" }],
-        // extending the default meta tags
-        meta: [
-          {
-            name: "twitter:image",
-            content:
-              "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-          },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-          { name: "twitter:description", content: "Agent" },
-        ],
-      }}
-    />
+    {
+      resume.map((item) => (
+        <SEO
+          title={title}
+          titleTemplate={`%s | ${item.data.profile.name}`}
+          titleDefault={`${item.data.profile.name} - Writing Portfolio`}
+          description={description}
+          openGraph={{
+            basic: {
+              title: `${title}`,
+              type: "website",
+              image: `${ogImg ? ogImg : ".../.../public/og-image.jpg"}`,
+            },
+            optional: {
+              description: `${description ? description : "Faisal had successfully written over 90 fundraising campaigns that have collectively raised over Rp1,800,000,000+"}`,
+              locale: "id_ID",
+              localeAlternate: ["en_US", "en_GB"],
+            },
+            image: {
+              type: "image/jpeg",
+              width: 100,
+              height: 100,
+              alt: "The image says Faisal M",
+            }
+          }},
+          twitter={{
+            card: "summary_large_image",
+            site: "@HomesickAlienn_",
+            creator: "@HomesickAlienn_",
+            title: `${title}`,
+            image: `${ogImg ? ogImg : ".../.../public/og-image.jpg"}`,
+            imageAlt: `${ogImg ? `${title} thumbnail` : "The image says Faisal M"}`,
+            description: `${description}`,
+          }}
+        />
+      ))
+    }
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Light mode favicon -->
+    <link
+      rel="icon"
+      href="/favicon-light.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Dark mode favicon -->
+    <link
+      rel="icon"
+      href="/favicon-dark.svg"
+      type="image/svg+xml"
+      media="(prefers-color-scheme: dark)"
+    />
+
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
   </head>
   <body>
     <Navbar desktopLinks={navLinks} mobileLinks={footerLinks} />
