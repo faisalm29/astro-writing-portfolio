@@ -3,6 +3,7 @@ import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
 import { getCollection } from "astro:content";
 import { SEO } from "astro-seo";
+import type { ImageMetadata } from "astro";
 
 const resume = await getCollection("resume");
 
@@ -43,7 +44,7 @@ const footerLinks = [
 interface Props {
   title?: string;
   description?: string;
-  ogImg?: string
+  ogImg?: ImageMetadata
 }
 
 const { title, description, ogImg } = Astro.props;
@@ -60,7 +61,7 @@ const { title, description, ogImg } = Astro.props;
           description={description}
           openGraph={{
             basic: {
-              title: `${title}`,
+              title: `${Astro.url.pathname !== "/" ? `${title} | ${item.data.profile.name}` : `${title}`}`,
               type: "website",
               image: `${ogImg ? ogImg : "/og-image.jpg"}`,
             },
@@ -80,7 +81,7 @@ const { title, description, ogImg } = Astro.props;
             card: "summary_large_image",
             site: "@HomesickAlienn_",
             creator: "@HomesickAlienn_",
-            title: `${title}`,
+            title: `${Astro.url.pathname !== "/" ? `${title} | ${item.data.profile.name}` : `${title}`}`,
             image: `${ogImg ? ogImg : "/og-image.jpg"}`,
             imageAlt: `${ogImg ? `${title} thumbnail` : "The image says Faisal M"}`,
             description: `${description ? description : "Faisal had successfully written over 90 fundraising campaigns that have collectively raised over Rp1,800,000,000+"}`,
