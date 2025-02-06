@@ -55,14 +55,14 @@ const { title, description, ogImg } = Astro.props;
       resume.map((item) => (
         <SEO
           title={title}
-          titleTemplate={`%s | ${item.data.profile.name}`}
+          titleTemplate={`%s ${Astro.url.pathname !== "/" ? `| ${item.data.profile.name}` : ""}`}
           titleDefault={`${item.data.profile.name} - Writing Portfolio`}
           description={description}
           openGraph={{
             basic: {
               title: `${title}`,
               type: "website",
-              image: `${ogImg ? ogImg : ".../.../public/og-image.jpg"}`,
+              image: `${ogImg ? ogImg : "/og-image.jpg"}`,
             },
             optional: {
               description: `${description ? description : "Faisal had successfully written over 90 fundraising campaigns that have collectively raised over Rp1,800,000,000+"}`,
@@ -81,9 +81,9 @@ const { title, description, ogImg } = Astro.props;
             site: "@HomesickAlienn_",
             creator: "@HomesickAlienn_",
             title: `${title}`,
-            image: `${ogImg ? ogImg : ".../.../public/og-image.jpg"}`,
+            image: `${ogImg ? ogImg : "/og-image.jpg"}`,
             imageAlt: `${ogImg ? `${title} thumbnail` : "The image says Faisal M"}`,
-            description: `${description}`,
+            description: `${description ? description : "Faisal had successfully written over 90 fundraising campaigns that have collectively raised over Rp1,800,000,000+"}`,
           }}
         />
       ))
