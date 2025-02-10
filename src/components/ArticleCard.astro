@@ -17,7 +17,7 @@ const { thumbnail, title, category, date, id } = Astro.props;
     <Image src={thumbnail} alt={title} width={1024} height={512} />
   </div>
   <div>
-    <p class="uppercase mb-4 text-center">{category}</p>
+    <p class="mb-4 text-center uppercase">{category}</p>
     <div class="mb-2 flex justify-center">
       <time class="font-serif italic">
         {

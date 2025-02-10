@@ -23,30 +23,30 @@ const works = [
 ---
 
 <BaseLayout title="Work">
-  <div class="mt-32 mb-32 md:mt-48 md:mb-48 lg:mt-64 lg:mb-64">
+  <div class="mb-32 mt-32 md:mb-48 md:mt-48 lg:mb-64 lg:mt-64">
     <h1
-      class="mb-16 md:mb-24 px-[5vw] text-3xl font-bold text-center md:text-4xl lg:text-5xl"
+      class="mb-16 px-[5vw] text-center text-3xl font-bold md:mb-24 md:text-4xl lg:text-5xl"
     >
       Work
     </h1>
-    <ul class="pt-24 border-t-[1px] border-secondary px-[5vw] md:pt-32">
+    <ul class="border-secondary border-t-[1px] px-[5vw] pt-24 md:pt-32">
       {
         works.map((work) => (
           <li class="mb-24 last:mb-0">
             <a
               href={`/work${work.url}`}
-              class="relative mb-16 last:mb-0 md:mb-24 lg:mb-0 lg:col-span-6"
+              class="relative mb-16 last:mb-0 md:mb-24 lg:col-span-6 lg:mb-0"
             >
               <img
                 src={placeholderImg.src}
                 alt={work.type}
-                class="brightness-50 w-full h-[287px] md:h-[500px] lg:h-[544px] object-cover"
+                class="h-[287px] w-full object-cover brightness-50 md:h-[500px] lg:h-[544px]"
               />
-              <div class="w-full absolute px-[5vw] z-10 m-0 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-invert text-center">
-                <p class="uppercase tracking-[0.08em] text-sm md:text-md lg:text-lg">
+              <div class="text-invert absolute left-1/2 top-1/2 z-10 m-0 w-full -translate-x-1/2 -translate-y-1/2 px-[5vw] text-center">
+                <p class="text-sm uppercase tracking-[0.08em] md:text-md lg:text-lg">
                   work
                 </p>
-                <h3 class="text-xl font-serif italic font-light md:text-3xl lg:text-4xl">
+                <h3 class="font-serif text-xl font-light italic md:text-3xl lg:text-4xl">
                   {work.type}
                 </h3>
               </div>

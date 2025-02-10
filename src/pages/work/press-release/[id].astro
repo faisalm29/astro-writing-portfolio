@@ -28,11 +28,11 @@ const { Content } = await render(release);
   description={release.data.description}
   ogImg={release.data.thumbnail}
 >
-  <article class="px-[5vw] mt-32 mb-32 md:mb-48 lg:mb-64">
+  <article class="mb-32 mt-32 px-[5vw] md:mb-48 lg:mb-64">
     <div class="mb-12">
       <div class="mb-12">
-        <p class="uppercase tracking-[0.08em] text-center">article</p>
-        <h1 class="text-3xl font-bold mb-2 text-center">
+        <p class="text-center uppercase tracking-[0.08em]">article</p>
+        <h1 class="mb-2 text-center text-3xl font-bold">
           {release.data.title}
         </h1>
         <div class="flex justify-center">
@@ -60,6 +60,19 @@ const { Content } = await render(release);
 
     <Prose>
       <Content />
+
+      <p>This press release was also published on:</p>
+      <ul>
+        {
+          release.data.releaseAt.map((source) => (
+            <li>
+              <a href={source.url} target="_blank">
+                {source.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </Prose>
   </article>
 </BaseLayout>

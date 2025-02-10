@@ -9,8 +9,8 @@ interface Props {
 const { desktopLinks, mobileLinks } = Astro.props;
 ---
 
-<nav class="px-[5vw] py-6 relative">
-  <ul class="flex justify-between items-center">
+<nav class="relative px-[5vw] py-6">
+  <ul class="flex items-center justify-between">
     <li><a href="/" class="tracking-[0.08em]">Faisal</a></li>
     {
       desktopLinks.map((link) => (
@@ -29,17 +29,17 @@ const { desktopLinks, mobileLinks } = Astro.props;
   <!-- Collapsible mobile navigation -->
   <div
     id="mobile-nav"
-    class="hidden md:hidden lg:hidden fixed z-50 w-screen h-screen top-0 left-0 surface-secondary pt-16 pl-[5vw] pr-[7.5vw]"
+    class="surface-secondary fixed left-0 top-0 z-50 hidden h-screen w-screen pl-[5vw] pr-[7.5vw] pt-16 md:hidden lg:hidden"
   >
-    <div class="flex justify-end mb-4">
+    <div class="mb-4 flex justify-end">
       <button id="btn-close">close</button>
     </div>
     <div class="mb-12">
-      <h4 class="uppercase tracking-[0.08em] mb-4">Go To</h4>
+      <h4 class="mb-4 uppercase tracking-[0.08em]">Go To</h4>
       <ul>
         {
           mobileLinks.map((link) => (
-            <li class="flex content-center justify-centers font-display gap-4 mb-4">
+            <li class="justify-centers font-display mb-4 flex content-center gap-4">
               <a class="text-md leading-[1em]" href={link.url}>
                 {link.name}
               </a>
@@ -49,7 +49,7 @@ const { desktopLinks, mobileLinks } = Astro.props;
       </ul>
     </div>
     <div class="mb-16 md:mb-8">
-      <h4 class="uppercase tracking-[0.08em] mb-4">Social</h4>
+      <h4 class="mb-4 uppercase tracking-[0.08em]">Social</h4>
       <ul class="text-md">
         <li class="mb-4">LinkedIn</li>
         <li class="mb-4">Instagram</li>

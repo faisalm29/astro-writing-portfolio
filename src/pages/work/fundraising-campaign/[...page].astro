@@ -26,17 +26,17 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title="Fundraising Campaign">
-  <div class="mt-32 mb-32 md:mt-48 md:mb-48 lg:mt-64 lg:mb-64">
+  <div class="mb-32 mt-32 md:mb-48 md:mt-48 lg:mb-64 lg:mt-64">
     <h1
-      class="text-3xl font-bold text-center mb-16 md:text-4xl after:content-['(featured)'] after:mt-2 after:block after:text-base after:font-normal after:font-serif after:italic lg:after:inline lg:text-5xl lg:after:mt-4 lg:after:absolute"
+      class="mb-16 text-center text-3xl font-bold after:mt-2 after:block after:font-serif after:text-base after:font-normal after:italic after:content-['(featured)'] md:text-4xl lg:text-5xl lg:after:absolute lg:after:mt-4 lg:after:inline"
     >
       Campaign
     </h1>
-    <div class="flex justify-center mb-8">
+    <div class="mb-8 flex justify-center">
       <Search />
     </div>
     <ul
-      class="px-[5vw] pt-24 border-t-[1px] border-secondary md:pt-32 grid md:grid-cols-8 lg:grid-cols-12 md:grid-rows-2 gap-y-32 md:gap-x-16"
+      class="border-secondary grid gap-y-32 border-t-[1px] px-[5vw] pt-24 md:grid-cols-8 md:grid-rows-2 md:gap-x-16 md:pt-32 lg:grid-cols-12"
     >
       {
         page.data.map((campaign) => (
